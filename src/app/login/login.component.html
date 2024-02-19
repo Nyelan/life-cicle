@@ -1,0 +1,23 @@
+<div class="loginBox">
+    <div *ngIf="!submitted">
+        <h3>Login</h3>
+        <form>
+            <label>User</label>
+            <input type="text" #username>
+
+            <label>Password</label>
+            <input type="password" #password>
+        </form>
+
+        <button (click)="onSubmit(username.value, password.value)">Login</button>
+    </div>
+
+    <div *ngIf="submitted">
+        <div *ngIf="isAuthenticated; else failureMsg">
+            <h4>Welcome, {{userName}}</h4>
+        </div>
+        <ng-template #failureMsg>
+            <h4>Invalid Login</h4>
+        </ng-template>
+    </div>
+</div>

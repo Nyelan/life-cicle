@@ -1,0 +1,17 @@
+.new{
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    background-color: blueviolet;
+    margin: 0;
+    padding: 0;
+}
+
+p{
+    background-color: gray;
+    margin: 0;
+    padding: 0;
+}
