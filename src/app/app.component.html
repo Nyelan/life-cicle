@@ -2,5 +2,7 @@
 <p>Olá Galera</p>
 <app-title title="Testando" name="produto1"></app-title>
 <app-check-sample *ngIf="isAliveCheckSample"></app-check-sample>
+<button *ngIf="isAliveCheckSample" (click)="destroy()">Destroy</button>
+<button *ngIf="!isAliveCheckSample" (click)="build()">Build</button>
 <app-login></app-login>
 <router-outlet/>

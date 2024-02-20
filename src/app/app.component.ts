@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import {TitleComponent} from "./title/title.component"
@@ -12,10 +12,15 @@ import { LoginComponent } from './login/login.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent implements OnDestroy{
-  ngOnDestroy(): void {
-    console.log("ngOnDestroy");
-  }
+export class AppComponent {
   title = 'life-cicle';
   isAliveCheckSample:boolean = true;
+
+  destroy(){
+    this.isAliveCheckSample = false;
+  }
+
+  build(){
+    this.isAliveCheckSample = true;
+  }
 }
